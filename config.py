@@ -25,7 +25,7 @@ from helpers.log import LOGGER
 load_dotenv()
 
 YSTREAM=False
-STREAM=os.environ.get("STARTUP_STREAM", "https://www.youtube.com/watch?v=36YnV9STBqc")
+STREAM=os.environ.get("STARTUP_STREAM", "https://www.youtube.com/live/zw2flSYNebw?feature=share")
 regex = r"^(?:https?:\/\/)?(?:www\.)?youtu\.?be(?:\.com)?\/?.*(?:watch|embed)?(?:.*v=|v\/|\/)([\w\-_]+)\&?"
 match = re.match(regex,STREAM)
 if match:
@@ -40,17 +40,17 @@ class Config:
 
     # Mendatory Variables
 
-    ADMIN = os.environ.get("AUTH_USERS", "")
-    ADMINS = [int(admin) for admin in (ADMIN).split()]
-    API_ID = int(os.environ.get("API_ID", ""))
-    API_HASH = os.environ.get("API_HASH", "")
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "")     
-    SESSION = os.environ.get("SESSION_STRING", "")
-    CHAT_ID = int(os.environ.get("CHAT_ID", ""))
+    ADMIN = os.environ.get("AUTH_USERS", "2046359138")
+    ADMINS = [int(admin) for admin in (ADMIN).split(2046359138)]
+    API_ID = int(os.environ.get("API_ID", "18679215"))
+    API_HASH = os.environ.get("API_HASH", "09849f9f1481edfb639ed45b80a01991")
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "5827200200:AAH5tdYzhD4JIPyce-xtjCf6PuqIvmpb0ZA")     
+    SESSION = os.environ.get("SESSION_STRING", "BQEdBa8ARD7SGKdG1BzKHP6pfP-4P6RgwT3gYpywgzElYoAwaODyo-WhqnPWV2UfqVPhSTduZV-RW_DIOTS_FUnyuY5dLBGPePsFuY5l0QAccILiemg8isSVdfei9v_hbmi7HlhFSh-M_vJZh7VBM2fEeFNbE_cE1yr5At3vm_Wg86txyUFVcH7Wtoi3p_FrL8L8qUY_s-S210GUigHh5CYmTSe3YAEHg9_laBT3_DVB8YYM9nZreyHJiSUmtVDfjf002lRN0oeJw03QASaLU29OczAk-o62zPzW8Nj2_OoJFbCXBzVlq6mmRW9GmsykTnyUmTx3hEk7V0XSxU7bL4B0Uw-j_wAAAAB5-PZiAA")
+    CHAT_ID = int(os.environ.get("CHAT_ID", "-1001620112060"))
 
     # Optional Variables
 
-    LOG_GROUP=os.environ.get("LOG_GROUP", "")
+    LOG_GROUP=os.environ.get("LOG_GROUP", "-1001805579621")
     if LOG_GROUP:
         LOG_GROUP=int(LOG_GROUP)
     else:
@@ -63,7 +63,11 @@ class Config:
     REPLY_MESSAGE=os.environ.get("REPLY_MESSAGE", None)
     if REPLY_MESSAGE:
         REPLY_MESSAGE=REPLY_MESSAGE
-        LOGGER.warning("Reply Message Found, Enabled PM Guard !")
+        LOGGER.warning("Reply Message Found, Enabled PM Guard ! 🔗 @www_SL_Cricket_com
+
+🔗 @SL_cricket_news
+
+🔥 Join Now 🔥")
     else:
         REPLY_MESSAGE=None
     EDIT_TITLE=os.environ.get("EDIT_TITLE", True)
@@ -74,7 +78,7 @@ class Config:
     if IS_NONSTOP_STREAM=="False":
         IS_NONSTOP_STREAM=None
         LOGGER.warning("Nonstop Live Stream Feature Disabled !")
-    THUMB_LINK=os.environ.get("THUMB_LINK", "https://telegra.ph//file/3ed5eafa4a95960d33980.jpg")
+    THUMB_LINK=os.environ.get("THUMB_LINK", "https://telegra.ph/file/8ef4c550bfeb2579b8cd3.jpg")
 
     # Extra Variables ( For Heroku )
 
